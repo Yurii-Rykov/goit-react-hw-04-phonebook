@@ -1,10 +1,8 @@
 import React from 'react';
 import s from './ContactList.module.css'
 
-class ContactList extends React.Component {
-  render() {
-    const { onContacts, onDelete } = this.props;
-    
+const ContactList = ({ onContacts, onDelete } ) => {
+  
     return (
       <ul className={s.contacts}>
         {onContacts.map(({ name, number, id }) => (
@@ -21,7 +19,6 @@ class ContactList extends React.Component {
         ))}
       </ul>
     );
-  }
 }
 
 export default ContactList;
