@@ -9,6 +9,7 @@ const App = () => {
   const [contacts, setContacts] = useState(
     () => JSON.parse(localStorage.getItem('contacts')) || initialContacts
   );
+
   const [filter, setFilter] = useState('');
 
   const addContact = data => {
@@ -44,7 +45,7 @@ const App = () => {
 
     localStorage.setItem('contacts', JSON.stringify(newContacts));
   };
-
+  
   return (
     <div className="container">
       <h1>Phonebook</h1>
